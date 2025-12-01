@@ -18,6 +18,5 @@ func (r *MessageRepository) Publish(message *entity.Message) error {
 }
 
 func (r *MessageRepository) Subscribe(topic string, handler func(message *entity.Message)) error {
-	// This repository is for publishing only
 	return nil
 }

@@ -5,7 +5,7 @@ import "WebSocket/pkg/entity"
 type MessageRepository struct {
 	PublishFunc       func(message *entity.Message) error
 	SubscribeFunc     func(topic string, handler func(message *entity.Message)) error
-	PublishedMessages chan *entity.Message // New channel to capture published messages
+	PublishedMessages chan *entity.Message
 }
 
 func (m *MessageRepository) Publish(message *entity.Message) error {

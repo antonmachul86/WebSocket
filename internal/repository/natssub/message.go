@@ -15,7 +15,6 @@ func NewMessageRepository(nc *nats.Conn) *MessageRepository {
 }
 
 func (r *MessageRepository) Publish(message *entity.Message) error {
-	// This repository is for subscribing only
 	return nil
 }
 

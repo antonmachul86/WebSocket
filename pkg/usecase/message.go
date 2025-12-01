@@ -14,7 +14,6 @@ func NewMessageUseCase(repo repository.MessageRepository) *MessageUseCase {
 }
 
 func (uc *MessageUseCase) ProcessAndDeliverMessage(message *entity.Message) error {
-	// Here you can add any business logic before publishing the message
 	return uc.repo.Publish(message)
 }
 
